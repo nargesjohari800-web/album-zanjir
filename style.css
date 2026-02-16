@@ -1,0 +1,304 @@
+
+
+/* فونت خیلی شل برای کل متن */
+body {
+    font-family: 'Quicksand', 'Comfortaa', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.1em; /* فاصله اضافی بین حروف */
+    line-height: 1.8; /* فاصله بین خطوط */
+}
+
+/* اضافه کردن فونت از Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Comfortaa&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+.lyrics {
+  font-family: 'Vazir', sans-serif;
+}
+@font-face {
+  font-family: 'CustomFont'; /* نام دلخواه برای فونت */
+  src: url(./Far_khodkar/Far_khodkar.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*  جدید اپدیت  این lyrce */
+.lyrics {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  font-family: 'CustomFont', 'Vazir', sans-serif;
+  direction: rtl;
+  text-align: center;
+}
+
+.lyrics.show {
+  opacity: 1;
+}
+/*  تمام */
+.lyrics {
+  margin-top: 25px;
+  min-height: 40px;
+  font-size: 15px;
+  color: #ccc;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+
+  font-family: 'CustomFont', sans-serif; /* استفاده از فونت جدید */
+}
+
+
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .album {
+      text-align: center;
+    }
+
+    /* ---------- VINYL ---------- */
+    .vinyl-wrapper {
+      
+      position: relative;
+      width: 320px;
+      height: 320px;
+      margin: auto;
+    }
+
+    .vinyl {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background:
+        repeating-radial-gradient(circle,
+          #111 0px,
+          #111 2px,
+          #000 3px,
+          #000 6px);
+      position: relative;
+    }
+
+    .playing {
+      animation: spin 4s linear infinite;
+    }
+
+    .vinyl::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      background: #000;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+    }
+
+    /* ---------- COVER ---------- */
+    .cover {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 120px;
+      height: 120px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      overflow: hidden;
+      z-index: 3;
+    }
+
+    .cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.4s ease;
+    }
+
+    /* ---------- TEXT ---------- */
+    h1 {
+      
+      margin-top: 30px;
+      font-size: 26px;
+      letter-spacing: 2px;
+    }
+
+    p {
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    /* ---------- AUDIO ---------- */
+    audio {
+      width: 280px;
+      filter: invert(1) brightness(0.9);
+      opacity: 0.85;
+    }
+
+    /* ---------- TRACKLIST ---------- */
+    /* .tracklist {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .tracklist li {
+      padding: 6px 0;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .tracklist li:hover {
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    .tracklist .active {
+      color: #fff;
+    } */
+
+
+
+
+    
+.tracklist li {
+  padding: 6px 0;
+  cursor: pointer;
+  transition: 
+    opacity 0.5s ease,
+    color 0.3s ease,
+    letter-spacing 0.3s ease;
+}
+
+/* آهنگ فعال */
+.tracklist li.active {
+  opacity: 1;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* بقیه آهنگ‌ها */
+.tracklist li.dim {
+  opacity: 0.35;
+}
+/*  */
+
+    .lyrics {
+      margin-top: 25px;
+      min-height: 40px;
+      font-size: 15px;
+      color: #ccc;
+      letter-spacing: 0.5px;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .lyrics.show {
+      opacity: 1;
+    }
+/*  عقب جبو کردم انگ  */
+.controls {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.controls button {
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background: #fff;
+  color: #000;
+}
+
+    /* ---------- ANIMATION ---------- */
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* ris */
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+
+      body {
+        height: auto;
+        padding: 40px 0;
+      }
+
+      .vinyl-wrapper {
+        width: 260px;
+        height: 260px;
+      }
+
+      .cover {
+        width: 100px;
+        height: 100px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      audio {
+        width: 240px;
+      }
+
+      .tracklist {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .vinyl-wrapper {
+        width: 220px;
+        height: 220px;
+      }
+
+      .cover {
+        width: 85px;
+        height: 85px;
+      }
+
+      h1 {
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+
+      audio {
+        width: 210px;
+      }
+
+      .tracklist li {
+        padding: 5px 0;
+      }
+    }

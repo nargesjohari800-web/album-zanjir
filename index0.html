@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="./style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <title>Album Zanjir</title>
+</head>
+
+<body>
+  <div class="album">
+
+    <div class="vinyl-wrapper">
+      <div class="vinyl" id="vinyl">
+        <div class="cover">
+          <img id="coverImage" src="./رحیم.jpg" alt="Cover">
+        </div>
+      </div>
+    </div>
+
+    <h1>ALBUM ZANJIR</h1>
+    <p>Rahim Yeganeh</p>
+
+<audio id="player" controls controlsList="nodownload">
+  <source src="./Rahim Yeganeh - Khosha.mp3" type="audio/mpeg">
+</audio>
+
+
+<div class="controls">
+  <button onclick="seek(-10)"> ← 10s</button>
+  <button onclick="seek(10)">10s →</button>
+<button id="downloadBtn" class="download hidden" onclick="downloadCurrentTrack()">↡ download</button>
+
+</div>
+  <div class="lyrics" id="lyrics"></div>
+    <ul class="tracklist">
+      <li class="active" onclick="playTrack(this, './Rahim Yeganeh - Khosha.mp3', './رحیم.jpg')">
+        01 — Khosha
+      </li>
+      <li onclick="playTrack(this, './Rahim Yeganeh - Khatereh.mp3', './رزحیم4.jpg')">
+        02 — Khatereh
+      </li>
+      <li onclick="playTrack(this, './Rahim Yeganeh - Nemidoonom.mp3', './رحیم5.jpg')">
+        03 — Nemidoonom
+      </li>
+
+            <li onclick="playTrack(this, './Rahim Yeganeh - Zanjir.mp3', './رحیم6.jpg')">
+        04 — ZANJIR
+      </li>
+            <li onclick="playTrack(this, './Rahim Yeganeh - Mara Kosht.mp3', './رحیم7.jpg')">
+        05 — Mara Kosht
+      </li>
+            <li onclick="playTrack(this, './Rahim Yeganeh - Delbar.mp3', './رزحیم9.jpg')">
+        06 — Delbar
+      </li>
+            <li onclick="playTrack(this, './Rahim Yeganeh - Faryad.mp3', './رزحیم2.jpg')">
+        07 — Faryad
+      </li>
+
+      </li>
+            <li onclick="playTrack(this, './Rahim Yeganeh - Atash.mp3', './رزحی109.jpg')">
+        08 — Atash
+      </li>
+
+            <li onclick="playTrack(this, './Rahim Yeganeh - Entezar.mp3', './رزحیممم.jpg')">
+        09 — Entezar
+      </li>
+    </ul>
+
+  </div>
+<script src="./script.js"></script>
+</body>
+</html>
